@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Registration</category>
+  <title>DRAMMS</title>
+  <description><![CDATA[Create a checkerboard volume of two volumes. The output volume will show the two inputs alternating according to the user supplied checkerPattern. This filter is often used to compare the results of image registration. Note that the second input is resampled to the same origin, spacing and direction before it is composed with the first input. The scalar type of the output volume will be the same as the input image scalar type.]]></description>
+  <version>1.4.1.$Revision$</version>
+  <documentation-url>http://wiki.slicer.org/slicerWiki/index.php/Documentation/4.3/Modules/DRAMMS</documentation-url>
+  <license/>
+  <contributor>Yangming Ou (MGH)</contributor>
+  <acknowledgements><![CDATA[This work is part of the National Alliance for Medical Image Computing (NAMIC), funded by the National Institutes of Health through the NIH Roadmap for Medical Research, Grant U54 EB005149.]]></acknowledgements>
+  <parameters>
+    <label>IO</label>
+    <description><![CDATA[Input/output parameters]]></description>
+    <image>
+      <name>inputSourceImage</name>
+      <label>input Source Image</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description><![CDATA[First Input volume]]></description>
+    </image>
+    <image>
+      <name>inputTargetImage</name>
+      <label>input Target Image</label>
+      <channel>input</channel>
+      <index>1</index>
+      <description><![CDATA[Second Input volume]]></description>
+    </image>
+    <image>
+      <name>outputRegisteredImage</name>
+      <label>Output Registered Image</label>
+      <channel>output</channel>
+      <index>2</index>
+      <description><![CDATA[Output filtered]]></description>
+    </image>
+	<image>
+      <name>outputDeformationField</name>
+      <label>Output Deformation Field</label>
+      <channel>output</channel>
+      <index>2</index>
+      <description><![CDATA[Output filtered]]></description>
+    </image>
+  </parameters>
+</executable>
