@@ -13,8 +13,14 @@ def main ():
         if arg in ("-x", "--xml"):
             printXML(sys.argv[0])
             return
-        elif arg in ("-o", "--other-argument"):
-            print('this is just a placeholder for other command line parsing')
+        elif arg in ("-S", "--source"):
+            print('input source image')
+		elif arg in ("-T", "--target"):
+			print('input target image')
+		elif arg in ("-O", "--outimg"):
+			print('output registered image')
+		elif arg in ("-D", "--outdef"):
+			print('output transformation')
         else:
             remainingArgs.append(arg)
 
