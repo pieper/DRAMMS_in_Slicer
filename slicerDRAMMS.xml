@@ -11,32 +11,32 @@
   <parameters>
     <label>IO</label>
     <description><![CDATA[Input/output parameters]]></description>
-    <image>
+    <image fileExtensions=".nii">
       <name>inputSourceImage</name>
       <label>input Source Image</label>
       <channel>input</channel>
       <index>0</index>
       <description><![CDATA[First Input volume]]></description>
     </image>
-    <image>
+    <image fileExtensions=".nii">
       <name>inputTargetImage</name>
       <label>input Target Image</label>
       <channel>input</channel>
       <index>1</index>
       <description><![CDATA[Second Input volume]]></description>
     </image>
-    <image>
+    <image fileExtensions=".nii">
       <name>outputRegisteredImage</name>
       <label>Output Registered Image</label>
       <channel>output</channel>
       <index>2</index>
       <description><![CDATA[Output filtered]]></description>
     </image>
-	<image>
+	<image fileExtensions=".nii">
       <name>outputDeformationField</name>
       <label>Output Deformation Field</label>
       <channel>output</channel>
-      <index>2</index>
+      <index>3</index>
       <description><![CDATA[Output filtered]]></description>
     </image>
   </parameters>

@@ -8,23 +8,17 @@ def printXML(cliPath):
     xmlFP.close()
 
 def main ():
-    remainingArgs = []
+    remainingArgs = ['../dramms-install/bin/dramms',]
     for arg in sys.argv[1:]:
         if arg in ("-x", "--xml"):
             printXML(sys.argv[0])
             return
-        elif arg in ("-S", "--source"):
-            print('input source image')
-		elif arg in ("-T", "--target"):
-			print('input target image')
-		elif arg in ("-O", "--outimg"):
-			print('output registered image')
-		elif arg in ("-D", "--outdef"):
-			print('output transformation')
         else:
             remainingArgs.append(arg)
 
-    exit(os.system("echo Running command with: %s" % remainingArgs))
+    command = "%s -a 0 -S %s -T %s -O %s -D %s" % tuple(remainingArgs)
+
+    exit(os.system(command))
 
 if __name__ == '__main__':
     try:
